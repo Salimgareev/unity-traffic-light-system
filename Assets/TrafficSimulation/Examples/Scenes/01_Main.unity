@@ -17694,6 +17694,7 @@ GameObject:
   - component: {fileID: 1426479221}
   - component: {fileID: 1426479220}
   - component: {fileID: 1426479219}
+  - component: {fileID: 1426479222}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -17853,6 +17854,19 @@ RectTransform:
   m_AnchoredPosition: {x: 16.54, y: 8.9}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1426479222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426479218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5dffe4711b9f14bb9765dc6e26a903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyLabel: {fileID: 1426479219}
 --- !u!1001 &1434530781
 PrefabInstance:
   m_ObjectHideFlags: 0
