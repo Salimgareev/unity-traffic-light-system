@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intersectionType: 0
-  isElectricity: 0
+  isElectr: 0
   id: 3
   prioritySegments: []
   lightsDuration: 5
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intersectionType: 0
-  isElectricity: 0
+  isElectr: 0
   id: 6
   prioritySegments:
   - {fileID: 151142524}
@@ -2375,7 +2375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intersectionType: 0
-  isElectricity: 0
+  isElectr: 0
   id: 0
   prioritySegments:
   - {fileID: 1902215357}
@@ -2946,7 +2946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intersectionType: 1
-  isElectricity: 0
+  isElectr: 0
   id: 7
   prioritySegments:
   - {fileID: 766746091}
@@ -13952,7 +13952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intersectionType: 0
-  isElectricity: 0
+  isElectr: 0
   id: 2
   prioritySegments: []
   lightsDuration: 5
@@ -14214,7 +14214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intersectionType: 1
-  isElectricity: 0
+  isElectr: 0
   id: 4
   prioritySegments: []
   lightsDuration: 8
@@ -20270,6 +20270,7 @@ GameObject:
   - component: {fileID: 1636921659}
   - component: {fileID: 1636921658}
   - component: {fileID: 1636921657}
+  - component: {fileID: 1636921660}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -20292,9 +20293,9 @@ RectTransform:
   m_Father: {fileID: 2044217484}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -442, y: 245}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -35}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1636921657
@@ -20379,6 +20380,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636921655}
   m_CullTransparentMesh: 1
+--- !u!114 &1636921660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636921655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3066de68696ac4f9a7bfdb085b9554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnOn: 1
+  yourButton: {fileID: 1636921657}
 --- !u!1 &1644790640
 GameObject:
   m_ObjectHideFlags: 0
@@ -21363,7 +21378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intersectionType: 0
-  isElectricity: 0
+  isElectr: 0
   id: 9
   prioritySegments:
   - {fileID: 495444333}
@@ -22181,7 +22196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intersectionType: 1
-  isElectricity: 0
+  isElectr: 0
   id: 8
   prioritySegments: []
   lightsDuration: 5
@@ -23636,7 +23651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intersectionType: 1
-  isElectricity: 0
+  isElectr: 0
   id: 5
   prioritySegments: []
   lightsDuration: 8
@@ -25429,7 +25444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intersectionType: 1
-  isElectricity: 0
+  isElectr: 0
   id: 1
   prioritySegments: []
   lightsDuration: 8
@@ -25834,8 +25849,8 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
