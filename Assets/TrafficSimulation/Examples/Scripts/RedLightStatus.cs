@@ -10,6 +10,8 @@ public class RedLightStatus : MonoBehaviour
 {
 
     public bool isLightOn = true; // По умолчанию светофор включен
+
+    public bool isManualLightOn = true;   // Светофор включен
     public int lightGroupId;  // Belong to traffic light 1 or 2?
     public Intersection intersection;
 
@@ -29,7 +31,7 @@ public class RedLightStatus : MonoBehaviour
 
     void SetTrafficLightColor()
     {
-        if (isLightOn)
+        if (isLightOn && isManualLightOn)
         {
 
             if (lightGroupId == intersection.currentRedLightsGroup)
@@ -44,7 +46,7 @@ public class RedLightStatus : MonoBehaviour
 
         GameObject GM = GameObject.Find("Button");
         Electricity electr = GM.GetComponent<Electricity>();
-        if (electr.turnOn)
+        if (electr.turnOn && isManualLightOn)
         {
             isLightOn = true;
             if (intersection.isElectr){

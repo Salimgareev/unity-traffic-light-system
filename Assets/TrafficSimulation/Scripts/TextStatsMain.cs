@@ -82,7 +82,11 @@ public class TextStatsMain : MonoBehaviour
 
         // infoText.text = "Средняя скорость: " + averageSpeed.ToString("F2") + " " + (vehicles[0].GetComponent<WheelDrive>().unitType == UnitType.KMH ? "км/ч" : "mph") + "\nКол-во машин: " + vehicleCount;
 
-        infoText.text = "Ср. скорость: " + averageSpeed.ToString("F2") + " " + (vehicles[0].GetComponent<WheelDrive>().unitType == UnitType.KMH ? "км/ч" : "mph") + "\nКол-во машин: " + vehicleCount + "\nОбщ. потребление: " + totalEnergyConsumption.ToString("F3") + " кВтч" + "\nОбщ. стоимость: " + (totalEnergyCost).ToString("F3") + " руб";
+        infoText.text = "Кол-во машин: " + vehicleCount
+         + "\nСр. скорость: " + averageSpeed.ToString("F2")
+         + " " + (vehicles[0].GetComponent<WheelDrive>().unitType == UnitType.KMH ? "км/ч" : "mph")
+         + "\nОбщ. потребление: " + totalEnergyConsumption.ToString("F3") 
+         + " кВтч" + "\nОбщ. стоимость: " + (totalEnergyCost).ToString("F3") + " руб";
 
     }
 }
