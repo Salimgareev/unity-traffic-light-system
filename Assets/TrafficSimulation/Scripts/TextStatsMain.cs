@@ -85,7 +85,7 @@ public class TextStatsMain : MonoBehaviour
         infoText.text = "Кол-во машин: " + vehicleCount
          + "\nСр. скорость: " + averageSpeed.ToString("F2")
          + " " + (vehicles[0].GetComponent<WheelDrive>().unitType == UnitType.KMH ? "км/ч" : "mph")
-         + "\nОбщ. потребление: " + totalEnergyConsumption.ToString("F3") 
+         + "\nОбщ. потребл.: " + totalEnergyConsumption.ToString("F3") 
          + " кВтч" + "\nОбщ. стоимость: " + (totalEnergyCost).ToString("F3") + " руб";
 
     }
