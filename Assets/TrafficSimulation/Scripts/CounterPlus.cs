@@ -9,7 +9,7 @@ public class CounterPlus : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Start counter");
+        // Debug.Log("Start counter");
         LoadRoad counter = roadLoad.GetComponent<LoadRoad>();
         if (plus)
         {

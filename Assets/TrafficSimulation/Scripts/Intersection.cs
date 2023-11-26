@@ -27,6 +27,8 @@ namespace TrafficSimulation
 
         //For traffic lights only
         public float lightsDuration = 8;
+        public float lightsDuration2 = 8;
+        public bool side2 = false;
         public float orangeLightDuration = 2;
         public List<Segment> lightsNbr1;
         public List<Segment> lightsNbr2;
@@ -39,12 +41,14 @@ namespace TrafficSimulation
 
         void Start()
         {
+            
             vehiclesQueue = new List<GameObject>();
             vehiclesInIntersection = new List<GameObject>();
             if (intersectionType == IntersectionType.TRAFFIC_LIGHT)
             {
                 isElectr = true;
-                InvokeRepeating("SwitchLights", lightsDuration, lightsDuration);
+                Invoke("SwitchLights", lightsDuration);
+                // InvokeRepeating("SwitchLights", lightsDuration, lightsDuration);
             }
         }
 
@@ -56,6 +60,14 @@ namespace TrafficSimulation
 
             //Wait few seconds after light transition before making the other car move (= orange light)
             Invoke("MoveVehiclesQueue", orangeLightDuration);
+
+            if (side2 == false) {
+                Invoke("SwitchLights", lightsDuration);
+                side2 = true;
+            } else {
+                Invoke("SwitchLights", lightsDuration2);
+                side2 = false;
+            }
         }
 
         void OnTriggerEnter(Collider _other)
