@@ -29,15 +29,36 @@ public class Button_Fix_Script : MonoBehaviour
         if (GM.activeSelf)
         {
             GM.SetActive(false);
-            yourButton.GetComponentInChildren<TMP_Text>().text = "Починить";
+            yourButton.GetComponentInChildren<TMP_Text>().text = "Вызвать мастера";
         }
         else
         {
-            GM.SetActive(true);
-            yourButton.GetComponentInChildren<TMP_Text>().text = "Сломать датчик";
+            yourButton.enabled = false;
+            Invoke("callMaster", 5);
         }
 
         Debug.Log(GM.activeSelf);
+    }
+
+    void callMaster()
+    {
+        GameObject mainInfo = GameObject.FindGameObjectWithTag("MainInfo");
+        TextStatsMain script = mainInfo.GetComponent<TextStatsMain>();
+        script.addMasterSensor();
+
+        GameObject GM = GameObject.FindGameObjectWithTag("PlusError");
+        if (GM == null)
+        {
+            GM = FindInActiveObjectByTag("PlusError");
+        }
+        if (GM == null)
+        {
+            return;
+        }
+
+        GM.SetActive(true);
+        yourButton.GetComponentInChildren<TMP_Text>().text = "Сломать датчик";
+        yourButton.enabled = true;
     }
 
     GameObject FindInActiveObjectByTag(string tag)

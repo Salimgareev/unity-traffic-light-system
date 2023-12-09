@@ -18,6 +18,9 @@ public class TextStatsMain : MonoBehaviour
     public float wattagePerLight = 30.0f; // Мощность светодиодных ламп в ваттах
     public float electricityRate = 4.81f; // Тариф на электроэнергию в рублях за кВт/час
 
+    private float masterElectricity = 1000.0f; // Фикс. цена вызова электрика
+    private float masterSensor = 500.0f; // Фикс. цена вызова мастера по датчикам
+    private float masterSum = 0.0f; // Затраты на мастеров
 
     // Start is called before the first frame update
     void Start()
@@ -79,15 +82,27 @@ public class TextStatsMain : MonoBehaviour
 
         // float totalEnergyCost = totalEnergyConsumption * electricityRate;
 
-
         // infoText.text = "Средняя скорость: " + averageSpeed.ToString("F2") + " " + (vehicles[0].GetComponent<WheelDrive>().unitType == UnitType.KMH ? "км/ч" : "mph") + "\nКол-во машин: " + vehicleCount;
 
         infoText.text = "Кол-во машин: " + vehicleCount
          + "\nСр. скорость: " + averageSpeed.ToString("F2")
          + " " + (vehicles[0].GetComponent<WheelDrive>().unitType == UnitType.KMH ? "км/ч" : "mph")
-         + "\nОбщ. потребл.: " + totalEnergyConsumption.ToString("F3") 
-         + " кВтч" + "\nОбщ. стоимость: " + (totalEnergyCost).ToString("F3") + " руб";
+         + "\nОбщ. потребл.: " + totalEnergyConsumption.ToString("F3") + " кВтч"
+         + "\nСтоимость ремонта: " + masterSum + " руб"
+         + "\nОбщ. стоимость: " + (totalEnergyCost).ToString("F3") + " руб";
 
+    }
+
+    public void addMasterElectricity()
+    {
+        masterSum = masterSum + masterElectricity;
+        totalEnergyCost = totalEnergyCost + masterElectricity;
+    }
+
+    public void addMasterSensor()
+    {
+        masterSum = masterSum + masterSensor;
+        totalEnergyCost = totalEnergyCost + masterSensor;
     }
 }
 

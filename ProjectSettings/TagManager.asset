@@ -8,6 +8,7 @@ TagManager:
   - Waypoint
   - TrafficLight
   - PlusError
+  - MainInfo
   layers:
   - Default
   - TransparentFX
