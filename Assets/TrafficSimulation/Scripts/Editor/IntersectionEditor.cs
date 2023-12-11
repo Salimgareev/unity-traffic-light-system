@@ -30,6 +30,7 @@ namespace TrafficSimulation {
 
             EditorGUILayout.LabelField("Traffic Lights", EditorStyles.boldLabel);
             intersection.lightsDuration = EditorGUILayout.FloatField("Light Duration (in s.)", intersection.lightsDuration);
+            intersection.lightsDuration2 = EditorGUILayout.FloatField("Light Duration2 (in s.)", intersection.lightsDuration2);
             intersection.orangeLightDuration = EditorGUILayout.FloatField("Orange Light Duration (in s.)", intersection.orangeLightDuration);
             SerializedProperty sLightsNbr1 = serializedObject.FindProperty("lightsNbr1");
             SerializedProperty sLightsNbr2 = serializedObject.FindProperty("lightsNbr2");
